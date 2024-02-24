@@ -14,8 +14,9 @@ async function index(req, res) {
   });
 }
 
-function newFlight(req, res) {
-  res.render('flights/new');
+async function newFlight(req, res) {
+  const flights = await Flight.find({});
+  res.render('flights/new', {flights});
 }
 
 async function create(req, res) {

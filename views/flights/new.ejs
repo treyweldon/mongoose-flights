@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 
 <h2>Enter a New Flight</h2>
-<form action="/flights" method="POST">
+<form action="/flights/<% flights._id %>" method="POST">
   <label>Airline:
     <select name="airline">
     <option value="American">American</option>
