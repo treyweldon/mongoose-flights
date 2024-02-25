@@ -19,7 +19,7 @@ async function create(req, res) {
     console.log("CREATE")
     await Flight.findById(req.params.id, function(err, flight) {
       Ticket.find({flight: flight._id}, function(err, tickets) {
-        // res.render('flights/details', {flight, tickets})
+        Ticket.create(req.body); 
         res.redirect(`flights/${_id}/destinations`);
       });
   });

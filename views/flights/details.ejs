@@ -21,6 +21,9 @@
   <br>
   <button type="submit">Add Destination</button>
 </form>
+<br>
+<a href="/flights">back</a>
+<br>
   <br>
   <table>
     <thead>
@@ -37,7 +40,7 @@
         </tr>
         <tr>
           <td><a href="/flights/<%= flights._id %>/tickets/new">Add Ticket</a></td>
-          <td><p>seat - price</p></td>
+          <td><%= d.seat %> + <%= d.price %></td>
           <% }); %>
 
           </tr>
