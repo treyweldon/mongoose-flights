@@ -22,8 +22,6 @@
   <button type="submit">Add Destination</button>
 </form>
   <br>
-
-<% if (flights.destination) { %>
   <table>
     <thead>
       <tr>
@@ -38,15 +36,14 @@
           <td><%= d.arrival %></td>
         </tr>
         <tr>
-            <td><a href="/flights/<%= flights._id %>/tickets/new">New Ticket</a></td>
-            
-            <td>Tickets go here</td>
-        </tr>
-      <% }); %>
+          <td><a href="/flights/<%= flights._id %>/tickets/new">Add Ticket</a></td>
+          <td><p>seat - price</p></td>
+          <% }); %>
+
+          </tr>
+
     </tbody>
   </table>
-<% } else { %>
-  <h5>No Flights Yet</h5>
-<% } %>
+
 
 <%- include('../partials/footer') %>
